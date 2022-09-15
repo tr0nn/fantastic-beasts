@@ -1,56 +1,56 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
-button{
-    border: px solid black;
-    background-color: darkblue;
+button {
+  border: px solid black;
+  background-color: darkblue;
 }
-header{
-    background-color: #7FFFD4;
-    height: 100px;
-    width: 100%;
-    border-bottom: 1px solid #000000; 
+header {
+  background-color: #7fffd4;
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid #000000;
 }
-header img{
-    width: 476px;
-    height: 43px;
-    top:28px;
-    margin-top:28px;
-    margin-left: 56px;
+header img {
+  width: 476px;
+  height: 43px;
+  top: 28px;
+  margin-top: 28px;
+  margin-left: 56px;
 }
-.main-content{
-    display: flex;
+.main-content {
+  display: flex;
 }
-.contact-sidebar{
-    background-color: #FFFCD7;
-    width: 250px;
-    height: 979px;
-    border-right:1px solid #000000;
+.contact-sidebar {
+  background-color: #fffcd7;
+  width: 250px;
+  height: 979px;
+  border-right: 1px solid #000000;
 }
-#add-contact-button{
-   width: 200px;
-   height: 40px;
-   background-color: #FFFFFA;
-   border: 1px solid #C0C0C0;
-   border-radius: 15px;
-   font-family: 'Quando';
-   font-size: 14px;
-   margin-left: 25px;
-   margin-top: 21px;
+#add-contact-button {
+  width: 200px;
+  height: 40px;
+  background-color: #fffffa;
+  border: 1px solid #c0c0c0;
+  border-radius: 15px;
+  font-family: 'Quando';
+  font-size: 14px;
+  margin-left: 25px;
+  margin-top: 21px;
 }
-#items{
-    margin-top:27px;
-    list-style-type:none;
-    width: 210px;
+#items {
+  margin-top: 27px;
+  list-style-type: none;
+  width: 210px;
 }
-#items button{
-    width: 200px;
-    height: 40px;
-    background-color: #FFFFFA;
-    border: 1px solid #C0C0C0;
-    border-radius: 15px;
-    font-family: 'Quando';
-    font-size: 14px;
-    margin-left: -16px;
-    margin-top: 26px;
+#items button {
+  width: 200px;
+  height: 40px;
+  background-color: #fffffa;
+  border: 1px solid #c0c0c0;
+  border-radius: 15px;
+  font-family: 'Quando';
+  font-size: 14px;
+  margin-left: -16px;
+  margin-top: 26px;
 }
