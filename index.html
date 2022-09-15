@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <link rel="stylesheet" href="./assests/css/modal.css">
+    <title>Fantastic Beasts</title>
+</head>
+<body>
+
+    <header>
+        <img src="/assests/img/Fantastic Beasts & how to call them (1).png">
+    </header>
+ 
+    <div class="main-content">
+        <section class="contact-sidebar">
+            <button id="add-contact-button" onclick="openModalWindow()">Add Contact</button>
+            <ul id="items">
+               <!--აქ იყრება კონტაქდები. კონტაქტების კლასია contact-list-->
+               
+            </ul>
+        </section>
+    
+        <section>
+            
+        </section>
+    </div>
+
+    <!--modal windows-->
+    <div id="open-modal-window">
+        <form class="submit-modal-form">
+            <div class="modal-body">
+                <label for="name">Name</label> <br><br>
+                <input id="input-name" type="text" name="name">
+            </div>
+            <div class="modal-body">
+                <label for="phone">Phone</label> <br><br>
+                <input id="input-phone" type="text" name="phone">
+            </div>
+
+            <div class="modal-footer">
+                <button id="submit-data-from-modal" onclick="addModalDate()" type="button">Add</button>
+                <button id="close-modal-window" onclick="closeModalWindow()" type="button">Close</button>
+            </div>
+        </form> 
+    </div>
+
+
+
+
+
+    <script src="./assests/scripts/script.js"></script>
+    <script src="./assests/scripts/contact.js"></script>
+</body>
+</html>
