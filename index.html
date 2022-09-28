@@ -7,26 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assests/css/style.css">
     <link rel="stylesheet" href="./assests/css/modal.css">
+    <link rel="stylesheet" href="./assests/css/cards.css">
     <title>Fantastic Beasts</title>
 </head>
 
 <body>
-
     <header>
         <img src="/assests/img/title.png">
     </header>
-
+ 
     <div class="main-content">
         <section class="contact-sidebar">
             <button id="add-contact-button" onclick="openModalWindow()">Add Contact</button>
             <ul id="items">
-                <!--აქ იყრება კონტაქდები. კონტაქტების კლასია contact-list-->
-
+               <!--აქ იყრება კონტაქდები. კონტაქტების კლასია contact-list-->
+               
             </ul>
         </section>
-
-        <section>
-
+        
+        <section class="cards-section"> <h1 id="select-contacts">Select Contacts</h1>
+                <ul>
+                    <li  id="cards-container">
+                        <!--აქ იყრება ქარდები-->
+                    </li>
+                </ul> 
         </section>
     </div>
 
@@ -46,12 +50,8 @@
                 <button id="submit-data-from-modal" onclick="addModalDate()" type="button">Add</button>
                 <button id="close-modal-window" onclick="closeModalWindow()" type="button">Close</button>
             </div>
-        </form>
+        </form> 
     </div>
-
-
-
-
 
     <script src="./assests/scripts/script.js"></script>
     <script src="./assests/scripts/contact.js"></script>

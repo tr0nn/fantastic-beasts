@@ -1,0 +1,70 @@
+.cards-section {
+  background-color: #c0c0c0;
+  width: 100%;
+}
+.li-node {
+  display: inline-block;
+  background-color: white;
+  margin-left: 120px;
+  margin-top: 50px;
+  border-radius: 25px;
+}
+#cards-container {
+  list-style-type: none;
+  width: 100%;
+}
+
+.cardH1-className {
+  font-family: 'Quando';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  width: 329px;
+  height: 19px;
+  margin-left: 35px;
+  padding-top: 30px;
+}
+.clardP-className {
+  font-family: 'Quando';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  width: 329px;
+  height: 20px;
+  margin-top: 40px;
+  margin-left: 35px;
+}
+.call-button {
+  width: 80px;
+  height: 30px;
+  margin-left: 35px;
+  margin-bottom: 16px;
+  background: rgba(6, 221, 6, 0.5);
+  border: 1px solid #adadad;
+  border-radius: 15px;
+}
+.delete-button {
+  width: 80px;
+  height: 30px;
+  background: rgba(236, 20, 20, 0.5);
+  border: 1px solid #adadad;
+  border-radius: 15px;
+  margin-left: 30px;
+}
+.close-button {
+  width: 80px;
+  height: 30px;
+  background: rgba(6, 195, 221, 0.51);
+  border: 1px solid #adadad;
+  border-radius: 15px;
+  margin-left: 30px;
+}
+.cards-section h1 {
+  text-align: center;
+  font-family: 'Quando';
+  font-size: 14px;
+}
