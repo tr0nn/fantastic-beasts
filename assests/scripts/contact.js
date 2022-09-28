@@ -14,6 +14,7 @@ function addModalDate(e) {
       e.stopImmediatePropagation();
     }
   });
+
   //-------------------------------------------------------------------------------
   if (beastName === '' || beastPhone === '') {
     alert('შეიყვანეთ ტექსტი');
@@ -39,6 +40,7 @@ function addModalDate(e) {
           let cardP = document.createElement('p');
           cardP.className = 'clardP-className';
           cardP.innerHTML = 'phone : ' + beastPhone;
+
           //call button create
           let callButton = document.createElement('button');
           callButton.className = 'call-button';
@@ -66,16 +68,23 @@ function addModalDate(e) {
           closeButton.className = 'close-button';
           closeButton.innerHTML = 'Close';
 
-          closeButton.onclick = event => {
+          closeButton.onclick = () => {
             for (var i = 0; i < beasts.length; i++) {
-              let paragraphs =
-                document.body.getElementsByClassName('cardH1-className');
-              Array.from(paragraphs).map(el => {
-                if (el.textContent == beasts[i].name) {
-                  console.log(el);
-                  el.parentElement.remove();
-                }
-              });
+              document.getElementById('card-' + beast.name).remove();
+
+              // ==============================================================
+              // THIS IS WRONG
+              // ==============================================================
+              // let paragraphs =
+              //   document.body.getElementsByClassName('cardH1-className');
+
+              // Array.from(paragraphs).map(el => {
+              //   if (el.textContent == beasts[i].name) {
+              //     console.log(el);
+              //     el.parentElement.remove();
+              //   }
+              // });
+              // ==============================================================
 
               //if (cardH1.textContent == beasts[i].name) {
               //const list = document.getElementById('cards-container');
@@ -85,6 +94,7 @@ function addModalDate(e) {
           };
           // creat new <li>
           const newNode = document.createElement('li');
+          newNode.id = 'card-' + beast.name;
           newNode.className = 'li-node';
           cardsContainerList.insertBefore(
             newNode,
