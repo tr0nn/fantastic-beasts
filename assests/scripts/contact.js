@@ -8,8 +8,8 @@ function addModalDate(e) {
 
   //----------- Add button ის დროს უნიკალურია name და დუბლირება რომ არ მოხდეს.
   beasts.forEach(bePhone => {
-    if (beastPhone === bePhone.phone) {
-      alert('A contact with this name already exists!');
+    if (beastPhone === bePhone.phone || beastName === bePhone.name) {
+      alert('A contact with this name or phone already exists!');
       closeModal();
       e.stopImmediatePropagation();
     }
@@ -17,7 +17,7 @@ function addModalDate(e) {
 
   //-------------------------------------------------------------------------------
   if (beastName === '' || beastPhone === '') {
-    alert('შეიყვანეთ ტექსტი');
+    alert('enter text!');
   } else {
     beasts.push({
       name: beastName,
@@ -25,12 +25,15 @@ function addModalDate(e) {
     });
 
     let contact = document.createElement('button');
+    contact.id = 'contactId-' + beastName;
     contact.className = 'contact-list';
     contact.innerText = beastName;
 
+    let x = 1;
     contact.onclick = () => {
       beasts.forEach(beast => {
-        if (beast.name === beastName) {
+        if (beast.name === beastName && x == 1) {
+          x = 2;
           // h1 ის შექმნა
           let cardH1 = document.createElement('h1');
           cardH1.className = 'cardH1-className';
@@ -46,11 +49,6 @@ function addModalDate(e) {
           callButton.className = 'call-button';
           callButton.innerHTML = 'Call';
           callButton.onclick = event => {
-            // event.target - button
-            // event.target.parentNode - li
-            // event.target.parentNode.getElementsByTagName('p')[0]; - paragraph
-            // use innerText and parse the string to get phone number
-            //console.log(event.target.parentNode.getElementsByTagName('p')[0]);
             alert('Calling To : ' + beastName);
           };
           //delete button create
@@ -59,8 +57,8 @@ function addModalDate(e) {
           deleteButton.innerHTML = 'Delete';
 
           deleteButton.onclick = event => {
-            alert(event);
-            document.getElementById('items').firstElementChild.remove();
+            document.getElementById('card-' + beast.name).remove();
+            document.getElementById('contactId-' + beastName).remove();
           };
 
           //Close button create
@@ -69,31 +67,11 @@ function addModalDate(e) {
           closeButton.innerHTML = 'Close';
 
           closeButton.onclick = () => {
-            for (var i = 0; i < beasts.length; i++) {
-              document.getElementById('card-' + beast.name).remove();
-
-              // ==============================================================
-              // THIS IS WRONG
-              // ==============================================================
-              // let paragraphs =
-              //   document.body.getElementsByClassName('cardH1-className');
-
-              // Array.from(paragraphs).map(el => {
-              //   if (el.textContent == beasts[i].name) {
-              //     console.log(el);
-              //     el.parentElement.remove();
-              //   }
-              // });
-              // ==============================================================
-
-              //if (cardH1.textContent == beasts[i].name) {
-              //const list = document.getElementById('cards-container');
-              //list.removeChild(list.children[0]);
-              //}
-            }
+            document.getElementById('card-' + beast.name).remove();
           };
           // creat new <li>
           const newNode = document.createElement('li');
+          //უნიკალური რომ იყოს.
           newNode.id = 'card-' + beast.name;
           newNode.className = 'li-node';
           cardsContainerList.insertBefore(
@@ -101,17 +79,12 @@ function addModalDate(e) {
             cardsContainerList.children[0]
           );
 
-          // //DOM ში ჩაგდება
-          // if (contact.textContent === cardH1.textContent) {
-          //   alert('same');
-          // } else {
           newNode.appendChild(cardH1);
           newNode.appendChild(cardP);
           newNode.appendChild(callButton);
           newNode.appendChild(deleteButton);
           newNode.appendChild(closeButton);
           cardsContainerList.appendChild(newNode);
-          //}
         }
       });
       document.getElementById('select-contacts').style.display = 'none';
