@@ -66,6 +66,7 @@ function addModalDate(e) {
 
           closeButton.onclick = () => {
             document.getElementById('card-' + beast.name).remove();
+            x = 1;
           };
           // creat new <li>
           const newNode = document.createElement('li');
