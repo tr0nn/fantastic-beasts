@@ -1,9 +1,9 @@
-//modal ფანჯრის გახსნა
+//open modal window
 function openModalWindow() {
   document.getElementById('open-modal-window').style.display = 'flex';
 }
 
-//modal ფანჯრის დახურვა
+//close modal window
 function closeModalWindow() {
   document.getElementById('open-modal-window').style.display = 'none';
 }

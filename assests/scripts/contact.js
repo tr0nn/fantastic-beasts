@@ -6,7 +6,6 @@ function addModalDate(e) {
   const beastName = document.getElementById('input-name').value;
   const beastPhone = document.getElementById('input-phone').value;
 
-  //----------- Add button ის დროს უნიკალურია name და დუბლირება რომ არ მოხდეს.
   beasts.forEach(bePhone => {
     if (beastPhone === bePhone.phone || beastName === bePhone.name) {
       alert('A contact with this name or phone already exists!');
@@ -15,7 +14,6 @@ function addModalDate(e) {
     }
   });
 
-  //-------------------------------------------------------------------------------
   if (beastName === '' || beastPhone === '') {
     alert('enter text!');
   } else {
@@ -34,24 +32,24 @@ function addModalDate(e) {
       beasts.forEach(beast => {
         if (beast.name === beastName && x == 1) {
           x = 2;
-          // h1 ის შექმნა
+          // creat h1
           let cardH1 = document.createElement('h1');
           cardH1.className = 'cardH1-className';
           cardH1.innerText = beast.name;
 
-          //p ელემენტის შექმნა
+          // creat p
           let cardP = document.createElement('p');
           cardP.className = 'clardP-className';
           cardP.innerHTML = 'phone : ' + beastPhone;
 
-          //call button create
+          //create call button
           let callButton = document.createElement('button');
           callButton.className = 'call-button';
           callButton.innerHTML = 'Call';
           callButton.onclick = event => {
             alert('Calling To : ' + beastName);
           };
-          //delete button create
+          //create delete button
           let deleteButton = document.createElement('button');
           deleteButton.className = 'delete-button';
           deleteButton.innerHTML = 'Delete';
@@ -61,7 +59,7 @@ function addModalDate(e) {
             document.getElementById('contactId-' + beastName).remove();
           };
 
-          //Close button create
+          //create Close button
           let closeButton = document.createElement('button');
           closeButton.className = 'close-button';
           closeButton.innerHTML = 'Close';
@@ -71,7 +69,6 @@ function addModalDate(e) {
           };
           // creat new <li>
           const newNode = document.createElement('li');
-          //უნიკალური რომ იყოს.
           newNode.id = 'card-' + beast.name;
           newNode.className = 'li-node';
           cardsContainerList.insertBefore(
